@@ -18,6 +18,7 @@ public class Exp3_S8_Francisco_Vargas {
         int opcion2=0;
         int opcion3=0;
         Boolean opcion4=false;
+        int opcion5=0;
         double estudiante=0.90;
         double terceraEdad= 0.85;
         String nombres="";
@@ -111,6 +112,30 @@ public class Exp3_S8_Francisco_Vargas {
                        
                     break;
                 case 2:
+                    System.out.println("---Actualizar Informacion---");
+                    if (asientos.isEmpty()) {
+                        System.out.println("Primmero compre o reserve un asiento para poder Actualizar");
+                        break;
+                    }
+                    
+                    System.out.println("---Actualizacion de asientos---");
+                    System.out.println("Ingrese el asiento a modificar");
+                    int numeroAsiento= scanner.nextInt();
+                        //obtenemos el indice del elemento
+                    int indexActualizar = asientos.indexOf(numeroAsiento);
+                        
+                    if (indexActualizar!=-1) {
+                       System.out.println("Ingrese un nuevo asiento");
+                       System.out.println(lugarAsientos);
+                       int nuevoAsiento=scanner.nextInt();
+                       //actualiza el elemento
+                        asientos.set(indexActualizar, nuevoAsiento);
+                        System.out.println("Asiento actualizado ");
+                        
+                   }else {
+                        System.out.println("Asiento no encontrado");
+                        }
+                        
                     
                     break;
                 case 3:
