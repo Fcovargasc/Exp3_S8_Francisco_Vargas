@@ -12,6 +12,7 @@ public class Exp3_S8_Francisco_Vargas {
         Scanner scanner= new Scanner(System.in);
         ArrayList <Object>  asientos = new ArrayList<>();
         ArrayList <String> informacion= new ArrayList<>();
+        String[] info={"Descuento estudiante 10%","descuento tercera edad 15%","Entrada General: $10000"};
         int entrada=10000;
         double total=0.0;
         int opcion=0;
@@ -22,7 +23,6 @@ public class Exp3_S8_Francisco_Vargas {
         double terceraEdad= 0.85;
         String nombres="";
         String lugarAsientos="1 2 3\n4 5 6\n7 8 9\n";
-        int asientosDisponibles=9;
         String asiento="";
         String nuevoAsiento="";
         System.out.println("BIENVENIDOS AL CAFE MORO");
@@ -39,12 +39,12 @@ public class Exp3_S8_Francisco_Vargas {
          
             switch (opcion){
                 case 1 :
-                    //por ahora se ve todo funcionando bien , no olvidar tratar de solucionar el error de por que no quiere pescar numeros mayores a 3 
+                    
                     System.out.println("---Venta de asientos---");
                     if (opcion4==true) {
                 System.out.println("---BOLETA---");
                    for (int i = 0; i < asientos.size(); i++) {
-                    //System.out.println((i+1)+"."+nombres.get(i)+ "- $"+precios.get(i));
+                   
                     System.out.println(informacion.get(i)+": "+asientos.get(i));
                        
                           }
@@ -99,7 +99,7 @@ public class Exp3_S8_Francisco_Vargas {
                              System.out.println("---BOLETA---");
                              for (int i = 0; i < asientos.size(); i++) {
                                  
-                            //System.out.println((i+1)+"."+nombres.get(i)+ "- $"+precios.get(i));
+                            
                             System.out.println(informacion.get(i)+": "+asientos.get(i));
                           }
                     
@@ -115,11 +115,12 @@ public class Exp3_S8_Francisco_Vargas {
                        
                     break;
                 case 2:
-                    //ver la verificacion de asientos que si preciona el mismo asiento tirar un mensaje y  volver a pedir que pong auna opcion 
-                    //todo lo demas se ve funcionando bien
+                     
+                    
                      System.out.println("---Actualizar Informacion---");
                     if (asientos.isEmpty()) {
                         System.out.println("Reserve un asiento para poder Actualizar");
+                        
                         break;
                     }
                     System.out.println("");
@@ -127,9 +128,7 @@ public class Exp3_S8_Francisco_Vargas {
                     System.out.println("");
                     System.out.println("Ingrese el asiento a modificar");
                     String numeroAsiento= scanner.nextLine();
-                    
-                    
-                        //obtenemos el indice del elemento
+                      
                     int indexActualizar = asientos.indexOf(numeroAsiento);
                         
                     if (indexActualizar!=-1) {
@@ -143,7 +142,7 @@ public class Exp3_S8_Francisco_Vargas {
                                
                            }
                        }while(asientos.contains(nuevoAsiento));
-                       //actualiza el elemento
+                      
                         asientos.set(indexActualizar, nuevoAsiento);
                         System.out.println("Asiento actualizado ");
                         System.out.println("Nuevo Asiento: "+asientos.get(indexActualizar));
@@ -153,7 +152,7 @@ public class Exp3_S8_Francisco_Vargas {
                         }
                     break;
                 case 3:
-                    //todo parece funcionar bien
+                    
                     System.out.println("---Reserva de asientos---");
                     System.out.println(lugarAsientos);
              do{
@@ -216,19 +215,18 @@ public class Exp3_S8_Francisco_Vargas {
                    break;
                 case 4:
                     
-                    String[] info={"Descuento estudiante 10%","descuento tercera edad 15%","Entrada General: $10000"};
+                    
                     System.out.println(info[0]);
                     System.out.println(info[1]);
                     System.out.println(info[2]);
                     break;
                 case 5:
-                    //uwu
-                    break;
+                  
             }
         
         
         }while( opcion !=5);
-        
+         
     }
     
 }
